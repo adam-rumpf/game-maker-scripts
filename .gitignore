@@ -2,3 +2,5 @@ datafiles/
 objects/
 options/
 rooms/
+*.yyp
+*.yy

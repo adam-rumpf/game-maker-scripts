@@ -1,6 +1,7 @@
 {
   "resources": [
-    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},"order":0,},
+    {"id":{"name":"_array_index","path":"scripts/_array_index/_array_index.yy",},"order":0,},
+    {"id":{"name":"_array_count","path":"scripts/_array_count/_array_count.yy",},"order":1,},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
