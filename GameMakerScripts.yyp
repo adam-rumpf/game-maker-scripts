@@ -1,13 +1,20 @@
 {
   "resources": [
     {"id":{"name":"_array_max","path":"scripts/_array_max/_array_max.yy",},"order":2,},
+    {"id":{"name":"_unit_vector","path":"scripts/_unit_vector/_unit_vector.yy",},"order":6,},
+    {"id":{"name":"_matrix_multiply","path":"scripts/_matrix_multiply/_matrix_multiply.yy",},"order":2,},
+    {"id":{"name":"_vector_rotate","path":"scripts/_vector_rotate/_vector_rotate.yy",},"order":4,},
+    {"id":{"name":"_matrix_transpose","path":"scripts/_matrix_transpose/_matrix_transpose.yy",},"order":7,},
     {"id":{"name":"_vector_distance","path":"scripts/_vector_distance/_vector_distance.yy",},"order":0,},
     {"id":{"name":"_array_index","path":"scripts/_array_index/_array_index.yy",},"order":0,},
     {"id":{"name":"_array_min","path":"scripts/_array_min/_array_min.yy",},"order":3,},
+    {"id":{"name":"_random_sample","path":"scripts/_random_sample/_random_sample.yy",},"order":1,},
     {"id":{"name":"_array_count","path":"scripts/_array_count/_array_count.yy",},"order":1,},
+    {"id":{"name":"_vector_angle","path":"scripts/_vector_angle/_vector_angle.yy",},"order":3,},
     {"id":{"name":"_vector_norm","path":"scripts/_vector_norm/_vector_norm.yy",},"order":1,},
     {"id":{"name":"_random_weighted_index","path":"scripts/_random_weighted_index/_random_weighted_index.yy",},"order":0,},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":0,},
+    {"id":{"name":"_vector_scale","path":"scripts/_vector_scale/_vector_scale.yy",},"order":5,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
