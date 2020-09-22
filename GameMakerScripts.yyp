@@ -8,6 +8,7 @@
     {"id":{"name":"_vector_distance","path":"scripts/_vector_distance/_vector_distance.yy",},"order":0,},
     {"id":{"name":"_array_index","path":"scripts/_array_index/_array_index.yy",},"order":0,},
     {"id":{"name":"_array_min","path":"scripts/_array_min/_array_min.yy",},"order":3,},
+    {"id":{"name":"_linear_solve","path":"scripts/_linear_solve/_linear_solve.yy",},"order":8,},
     {"id":{"name":"_random_sample","path":"scripts/_random_sample/_random_sample.yy",},"order":1,},
     {"id":{"name":"_array_count","path":"scripts/_array_count/_array_count.yy",},"order":1,},
     {"id":{"name":"_vector_angle","path":"scripts/_vector_angle/_vector_angle.yy",},"order":3,},
@@ -15,6 +16,7 @@
     {"id":{"name":"_random_weighted_index","path":"scripts/_random_weighted_index/_random_weighted_index.yy",},"order":0,},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":0,},
     {"id":{"name":"_vector_scale","path":"scripts/_vector_scale/_vector_scale.yy",},"order":5,},
+    {"id":{"name":"_triangular_solve","path":"scripts/_triangular_solve/_triangular_solve.yy",},"order":9,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
