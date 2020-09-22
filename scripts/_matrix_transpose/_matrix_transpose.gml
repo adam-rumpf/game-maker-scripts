@@ -1,7 +1,7 @@
 /// @func _matrix_transpose(a)
 /// @desc Transposes a 2D array.
-/// @param {*[]} a Matrix to transpose.
-/// @return {*[]} The transpose of the input array a.
+/// @param {*[][]} a Matrix to transpose.
+/// @return {*[][]} The transpose of the input array a.
 
 function _matrix_transpose(a)
 {

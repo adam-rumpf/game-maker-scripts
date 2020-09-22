@@ -1,18 +1,29 @@
-/// @func _array_min(arr)
-/// @desc Finds the minimum value in an array.
+/// @func _array_min(arr[, val=true])
+/// @desc Finds the minimum value (or its index) in an array.
 /// @param {real[]} arr Array to search.
-/// @return {real} Minimum value in arr.
+/// @param {bool} [val=true] If true the minimum value is returned, if false the (first) index of the minimum value is returned.
+/// @return {real} Minimum value (or its index) in arr.
 
 function _array_min(arr)
 {
+	// Check for optional index argument
+	var val = (argument_count > 1 ? argument[1] : true);
+	
 	// Go through array to find smallest value
-	var val = infinity;
+	var mv = infinity; // minimum value
+	var mi = -1; // index of minimum value
 	for (var i = 0; i < array_length(arr); i++)
 	{
-		if (arr[i] < val)
-			val = arr[i];
+		if (arr[i] < mv)
+		{
+			mv = arr[i];
+			mi = i;
+		}
 	}
 	
-	// Return smallest value
-	return val;
+	// Return smallest value or its index
+	if (val == true)
+		return mv;
+	else
+		return mi;
 }

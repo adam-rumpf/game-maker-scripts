@@ -1,7 +1,7 @@
 /// @func _matrix_multiply(a, b)
 /// @desc Multiplies two matrices and/or vectors of compatible dimensions.
-/// @param {real[]} a 1D or 2D array to use as the left factor of the product.
-/// @param {real[]} b 1D or 2D array to use as the right factor of the product.
+/// @param {real[]*} a 1D or 2D array to use as the left factor of the product.
+/// @param {real[]*} b 1D or 2D array to use as the right factor of the product.
 /// @return {real[]} Product of matrix multiplication (undefiend if dimensions not compatible; scalar for vector-vector products).
 
 function _matrix_multiply(a, b)

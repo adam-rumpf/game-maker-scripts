@@ -1,8 +1,7 @@
 /// @func _linear_solve(a, b)
-/// @desc Solves a linear system of the form Ax = b (via Gaussian elimination) for a given coefficient matrix and constant vector.
-/// @requires _triangular_solve
-/// @param {real[]} a Square coefficient matrix (as a 2D array).
-/// @param {real[]} b Constraint vector (as a 1D array whose length matches a).
+/// @desc Solves a linear system of the form Ax = b (via Gaussian elimination with partial pivoting) for a given coefficient matrix and constant vector.
+/// @param {real[][]} a Square coefficient matrix.
+/// @param {real[]} b Constant vector (as an array whose length matches a).
 /// @return {real[]} Solution vector x of the linear system Ax = b (undefined in case of inconsistent dimensions or singular matrix).
 
 function _linear_solve(a, b)
@@ -12,31 +11,60 @@ function _linear_solve(a, b)
 		return undefined;
 	
 	// Initialize system
-	var n, l, u;
+	var n, aa, bb, xx, perm;
 	n = array_length(b); // size of system
-	l = array_create(n, array_create(n, 0)); // lower triangular matrix
+	aa = a; // diagonalized matrix
+	bb = b; // constant vector
+	xx = array_create(n); // solution vector
+	perm = array_create(n); // row permutation array
 	for (var i = 0; i < n; i++)
-		l[i][i] = 1; // initialize as identity matrix
-	u = a; // upper triangular matrix
+		perm[i] = i;
 	
-	// Perform Gaussian elimination to obtain LU decomposition
-	for (var i = 0; i < n-1; i++)
+	// Perform Gaussian elimination with partial pivoting
+	for (var i = 0; i < n; i++)
 	{
+		// Find maximum absolute value in current column's subdiagonal
+		var p = i; // pivot row index
 		for (var j = i+1; j < n; j++)
 		{
-			// Verify that we are not dividing by zero
-			if (u[i][i] == 0)
-				return undefined;
+			if (abs(aa[perm[j]][i]) > abs(aa[perm[p]][i]))
+				p = j;
+		}
+		
+		// Verify that the element is nonzero
+		if (aa[perm[p]][i] == 0)
+			return undefined;
+		
+		// Set permutation array to exchange the current row and the pivot row
+		if (i != p)
+		{
+			var temp = perm[i];
+			perm[i] = perm[p];
+			perm[p] = temp;
+		}
+		
+		// Perform elimination using pivot element
+		for (var j = 0; j < n; j++)
+		{
+			// Ignore pivot row
+			if (j == i)
+				continue;
 			
-			l[j][i] = u[j][i]/u[i][i];
+			// Calculate multiplicative factor
+			var multi = aa[perm[j]][i]/aa[perm[i]][i];
+			
+			// Eliminate row
 			for (var k = i; k < n; k++)
-				u[j][k] = u[j][k] - l[j][i]*u[i][k];
+				aa[perm[j]][k] -= multi*aa[perm[i]][k];
+			
+			// Transform constant vector
+			bb[perm[j]] -= multi*bb[perm[i]];
 		}
 	}
 	
-	// Solve Ly = b
-	var yy = _triangular_solve(l, b, false);
+	// Solve diagonalized system
+	for (var i = 0; i < n; i++)
+		xx[i] = bb[perm[i]]/aa[perm[i]][i];
 	
-	// Solve Ux = y
-	return _triangular_solve(u, yy, true);
+	return xx;
 }

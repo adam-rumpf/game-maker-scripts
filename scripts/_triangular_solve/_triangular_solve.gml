@@ -1,7 +1,7 @@
 /// @func _triangular_solve(a, b[, upper])
 /// @desc Solves a triangular system of the form Ax = b for a given triangular coefficient matrix and constant vector.
-/// @param {real[]} a Triangular, square coefficient matrix (as a 2D array).
-/// @param {real[]} b Constraint vector (as a 1D array whose length matches a).
+/// @param {real[][]} a Triangular, square coefficient matrix.
+/// @param {real[]} b Constant vector (as a 1D array whose length matches a).
 /// @param {bool} [upper=true] True if a is upper triangular, false if a is lower triangular.
 /// @return {real[]} Solution vector x of the triangular system Ax = b (undefined in case of inconsistent dimensions or singular matrix).
 
