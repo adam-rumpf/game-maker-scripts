@@ -1,4 +1,4 @@
-/// @func _array_min(arr[, val=true])
+/// @func _array_min(arr[, val])
 /// @desc Finds the minimum value (or its index) in an array.
 /// @param {real[]} arr Array to search.
 /// @param {bool} [val=true] If true the minimum value is returned, if false the (first) index of the minimum value is returned.

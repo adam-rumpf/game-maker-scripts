@@ -1,6 +1,6 @@
 # GameMaker Scripts
 
-A collection of general utility scripts for GameMaker Studio 2 (Version 2.3).
+A collection of general utility and mathematical functions for GameMaker Studio 2 (Version 2.3).
 
 All scripts are included in the `scripts/` folder of this repository. Each script defines a single function. Most functions are standalone and are meant to be taken à la carte, but some of the more mathematically complicated functions depend on other scripts, indicated in a `@requires` tag. All function names begin with an underscore (`_`) in order to distinguish them from built-in functions.
 
@@ -18,6 +18,13 @@ Common array functions (such as searching and counting).
 * [`_linspace`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_linspace/_linspace.gml): Generates an array with a specified number of equally-spaced values that cover a specified range.
 * [`_permute`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_permute/_permute.gml): Permutes the elements of an array according to a given permutation array.
 * [`_range`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_range/_range.gml): Generates an array of equally-spaced values over a specified range with a specified step size.
+
+## Computational Mathematics Functions
+
+Numerical algorithms for computational mathematics.
+
+* [`_root_bisection`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_root_bisection/_root_bisection.gml): Finds a function root on a specified interval using the bisection method.
+* [`_root_newton`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_root_newton/_root_newton.gml): Finds a function root given a derivative and an initial guess using Newton's method.
 
 ## Linear Algebra Functions
 
