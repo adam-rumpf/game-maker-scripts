@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"_cubic_spline_coefficients","path":"scripts/_cubic_spline_coefficients/_cubic_spline_coefficients.yy",},"order":2,},
     {"id":{"name":"_array_max","path":"scripts/_array_max/_array_max.yy",},"order":2,},
     {"id":{"name":"_unit_vector","path":"scripts/_unit_vector/_unit_vector.yy",},"order":6,},
     {"id":{"name":"_matrix_multiply","path":"scripts/_matrix_multiply/_matrix_multiply.yy",},"order":2,},
@@ -9,6 +10,7 @@
     {"id":{"name":"_root_newton","path":"scripts/_root_newton/_root_newton.yy",},"order":1,},
     {"id":{"name":"_linspace","path":"scripts/_linspace/_linspace.yy",},"order":7,},
     {"id":{"name":"_array_index","path":"scripts/_array_index/_array_index.yy",},"order":0,},
+    {"id":{"name":"_cubic_spline_evaluate","path":"scripts/_cubic_spline_evaluate/_cubic_spline_evaluate.yy",},"order":3,},
     {"id":{"name":"_array_min","path":"scripts/_array_min/_array_min.yy",},"order":3,},
     {"id":{"name":"_linear_solve","path":"scripts/_linear_solve/_linear_solve.yy",},"order":8,},
     {"id":{"name":"_random_sample","path":"scripts/_random_sample/_random_sample.yy",},"order":1,},

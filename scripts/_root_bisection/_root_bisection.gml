@@ -1,5 +1,5 @@
 /// @func _root_bisection(f, a, b[, err[, cutoff]])
-/// @func Finds the root of a real-valued function on a specified interval using the bisection method.
+/// @func Finds the root of a real-valued, continuous function on a specified interval using the bisection method.
 /// @param {function} f Function (which maps reals to reals) to find the root of. The signs of f(a) and f(b) must be opposite.
 /// @param {real} a Lower bound of search interval.
 /// @param {real} b Upper bound of search interval.
