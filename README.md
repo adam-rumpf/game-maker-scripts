@@ -10,10 +10,10 @@ The following is a brief description of the included functions, divided into rou
 
 A variety of scripts dealing with functions and sets, which may have some uses for managing data structures.
 
-* [`_integer_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_to_natural/_integer_to_natural.gml): Converts an integer to a unique natural number using the zig-zagging bijection from _0, 1, -1, 2, -2, ..._ to _0, 1, 2, 3, 4, ..._. The inverse of `_natural_to_integer`.
-* [`_natural_to_integer`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_natural_to_integer/_natural_to_integer.gml): Converts a natural number to a unique integer using the zig-zagging bijection from _0, 1, 2, 3, 4, ..._ to _0, 1, -1, 2, -2, ..._. The inverse of `_integer_to_natural`.
+* [`_integer_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_to_natural/_integer_to_natural.gml): Converts an integer to a unique natural number using the zig-zagging bijection from _(0, 1, -1, 2, -2, ...)_ to _(0, 1, 2, 3, 4, ...)_. The inverse of `_natural_to_integer`.
+* [`_natural_to_integer`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_natural_to_integer/_natural_to_integer.gml): Converts a natural number to a unique integer using the zig-zagging bijection from _(0, 1, 2, 3, 4, ...)_ to _(0, 1, -1, 2, -2, ...)_. The inverse of `_integer_to_natural`.
 * [`_natural_to_pair`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_natural_to_pair/_natural_to_pair.gml): Converts a natural number to a unique ordered pair of natural numbers using the [inverse Cantor pairing function](https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function). The inverse of `_pair_to_natural`.
-* [`_pair_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_pair_to_natural/_pair_to_natural.gml): Converts an ordered pair of natural numbers to a unique natural number using the [Cantor pairing function](https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function). The inverse of `_pair_to_natural`.
+* [`_pair_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_pair_to_natural/_pair_to_natural.gml): Converts an ordered pair of natural numbers to a unique natural number using the [Cantor pairing function](https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function). The inverse of `_natural_to_pair`.
 
 ## Array Functions
 
@@ -48,8 +48,8 @@ Common linear algebra algorithms for dealing with matrices and vectors. In all f
 * [`_triangular_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_triangular_solve/_triangular_solve.gml): Solves an upper or lower triangular system (using [forward or back substitution](https://www.cs.cornell.edu/~bindel/class/cs6210-f12/notes/lec08.pdf)).
 * [`_unit_vector`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_unit_vector/_unit_vector.gml): Defines a unit direction vector between two coordinates.
 * [`_vector_angle`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_vector_angle/_vector_angle.gml): Calculates the acute angle between two vectors.
-* [`_vector_distance`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_vector_distance/_vector_distance.gml): Calculates the Lp-distance between two vectors.
-* [`_vector_norm`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_vector_norm/_vector_norm.gml): Calculates the Lp-norm of a vector.
+* [`_vector_distance`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_vector_distance/_vector_distance.gml): Calculates the [Lp-distance](https://en.wikipedia.org/wiki/Lp_space) between two vectors.
+* [`_vector_norm`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_vector_norm/_vector_norm.gml): Calculates the [Lp-norm](https://en.wikipedia.org/wiki/Lp_space) of a vector.
 * [`_vector_rotate`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_vector_rotate/_vector_rotate.gml): Rotates a 2D vector by a specified angle.
 * [`_vector_scale`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_vector_scale/_vector_scale.gml): Scales a vector to maintain its direction while giving it a specified norm.
 
