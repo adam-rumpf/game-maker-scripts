@@ -1,5 +1,5 @@
 /// @func _cubic_spline_evaluate(a, b, c, d, x, t)
-/// @desc Evaluate a natural cubic spline at point t for coefficient vectors a, b, c, and d and input data vector x.
+/// @desc Evaluates a natural cubic spline at point t for coefficient vectors a, b, c, and d and input data vector x.
 /// @param {real[]} a Vector of cubic coefficients [a0, a1, ..., a(n-1)].
 /// @param {real[]} b Vector of quadratic coefficients [b0, b1, ..., b(n-1)].
 /// @param {real[]} c Vector of linear coefficients [c0, c1, ..., c(n-1)].
@@ -26,6 +26,7 @@ function _cubic_spline_evaluate(a, b, c, d, xx, t)
 	while ((t >= xx[ii+1]) && (ii < n-2))
 		ii++;
 	
-	// Evaluate the function using the corresponding coefficients
-	return a[ii]*power((t-xx[ii]), 3) + b[ii]*sqr(t-xx[ii]) + c[ii]*(t-xx[ii]) + d[ii];
+	// Evaluate the polynomial using Horner's method and the coefficients for the chosen interval
+	var dx = t - xx[ii]; // position within interval
+	return ((a[ii]*dx + b[ii])*dx + c[ii])*dx + d[ii];
 }
