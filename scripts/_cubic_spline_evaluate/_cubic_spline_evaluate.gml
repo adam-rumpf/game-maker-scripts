@@ -8,7 +8,7 @@
 /// @param {real} t Value at which to evaluate the spline.
 /// @return {real} Value of spline function evaluated at point t, depending on which interval if falls into, undefined in case of array size mismatch.
 /**
- * For a data set of the form [x0, x1, ..., xn], [y0, y1, ..., yn], the cubic spline consists of a
+ * For a data set of the form [x0, x1, ..., xn], [y0, y1, ..., yn], the cubic spline
  * consists of n-1 piecewise polynomials of the form:
  *     si(x) = ai (x-xi)^3 + bi (x-xi)^2 + ci (x-xi) + di
  * on interval (xi, x(i+1)).
