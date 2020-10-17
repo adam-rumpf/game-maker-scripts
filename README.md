@@ -43,6 +43,7 @@ Numerical algorithms for computational mathematics.
 
 Common linear algebra algorithms for dealing with matrices and vectors. In all functions, _vectors_ are considered to be 1D arrays while _matrices_ are 2D arrays (i.e. arrays of arrays).
 
+* [`_coordinate_remap`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_coordinate_remap/_coordinate_remap.gml): Remaps a coordinate from one rectangular region to another.
 * [`_linear_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_linear_solve/_linear_solve.gml): Solves a linear system of the form _Ax = b_ (using [Gaussian elimination with partial pivoting](https://en.wikipedia.org/wiki/Pivot_element)).
 * [`_matrix_multiply`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_multiply/_matrix_multiply.gml): Performs matrix-matrix, matrix-vector, and vector-vector multiplication.
 * [`_matrix_transpose`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_transpose/_matrix_transpose.gml): Transposes a 2D matrix.
