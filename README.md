@@ -2,7 +2,7 @@
 
 A collection of general utility and mathematical functions for [GameMaker Studio 2](https://www.yoyogames.com/) (Version 2.3). These mostly consist of functions that I have found useful during my own game development, and I expect to periodically add more over time.
 
-A [local asset package](https://docs2.yoyogames.com/source/_build/2_interface/2_extras/local_asset_packages.html) containing all scripts can be found for free on the [releases](https://github.com/adam-rumpf/game-maker-scripts/releases) page or as donationware from my [itch.io page](https://adam-rumpf.itch.io/gamemaker-studio-2-mathematical-scripts). I encourage you to download it, use it in your own projects, and modify the source code as much as you like free of charge. If, however, you really, really want to pay for it and it is within your means to do so, I would not say no to your financial support.
+A [local asset package](https://docs2.yoyogames.com/source/_build/2_interface/2_extras/local_asset_packages.html) containing all scripts can be found on the [releases](https://github.com/adam-rumpf/game-maker-scripts/releases) or from my [itch.io page](https://adam-rumpf.itch.io/gamemaker-studio-2-mathematical-scripts). I encourage you to download it, use it in your own projects, and modify the source code as much as you like.
 
 Each script defines a single function. Most functions are standalone and are meant to be taken à la carte, but some of the more mathematically complicated functions depend on other scripts, indicated in a `@requires` tag. All function names begin with an underscore (`_`) in order to distinguish them from built-in functions.
 
