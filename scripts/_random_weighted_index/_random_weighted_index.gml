@@ -23,7 +23,7 @@ function _random_weighted_index(wt)
 
 	// Find which interval this number belongs to
 	var i = 0;
-	while (r > 0 && i < n)
+	while ((r > 0) && (i < n))
 	{
 		r -= wt[i];
 		i++;

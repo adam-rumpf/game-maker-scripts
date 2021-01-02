@@ -22,6 +22,7 @@ A variety of scripts dealing with sequences, functions, and sets, which may have
 Common array functions (such as searching and counting).
 
 * [`_array_count`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_array_count/_array_count.gml): Counts the number of occurrences of a specified value in an array.
+* [`_array_function`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_array_function/_array_function.gml): Applies a given function to every element of a given array, and returns an array of results.
 * [`_array_index`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_array_index/_array_index.gml): Finds the first index at which a specified value occurs in an array (or -1 if not found). An optional argument allows the search to begin from a specified index.
 * [`_array_max`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_array_max/_array_max.gml): Returns the maximum value (or the index of the maximum value) in an array.
 * [`_array_min`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_array_min/_array_min.gml): Returns the minimum value (or the index of the minimum value) in an array.
