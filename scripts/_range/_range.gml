@@ -1,4 +1,4 @@
-/// @func _range(start, stop[, step]])
+/// @func _range(start, stop[, step])
 /// @desc Generates an array of equally-spaced values over a specified range with a specified step size.
 /// @param {real} start First value of array.
 /// @param {real} stop Final value of array (if the step size evenly divides the array; otherwise gives an upper bound to the final value).
