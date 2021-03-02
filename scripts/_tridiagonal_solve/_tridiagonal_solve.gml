@@ -1,9 +1,9 @@
 /// @func _tridiagonal_solve(lower, diag, upper, b)
 /// @desc Solves a tridiagonal linear system (via the Thomas algorithm) defined by a given set of diagonal and constant vectors.
-/// @param {real[]} lower Lower diagonal vector (of length 1 less than size of matrix).
-/// @param {real[]} diag Diagonal vector (of length equal to size of matrix).
-/// @param {real[]} upper Upper diagonal vector (of length 1 less than size of matrix).
-/// @param {real[]} b Constant vector (of length equal to size of matrix).
+/// @param {real[]} lower - Lower diagonal vector (of length 1 less than size of matrix).
+/// @param {real[]} diag - Diagonal vector (of length equal to size of matrix).
+/// @param {real[]} upper - Upper diagonal vector (of length 1 less than size of matrix).
+/// @param {real[]} b - Constant vector (of length equal to size of matrix).
 /// @return {real[]} Solution vector of linear system (or undefined if system is singular).
 
 function _tridiagonal_solve(lower, diag, upper, b)

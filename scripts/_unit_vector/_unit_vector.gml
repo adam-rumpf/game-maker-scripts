@@ -1,8 +1,9 @@
 /// @func _unit_vector(u, v)
 /// @desc Finds the unit vector pointing from coordinate u to coordinate v.
-/// @requires _vector_norm, _vector_scale
-/// @param {real[]} u Tail of direction vector.
-/// @param {real[]} v Head of direction vector.
+/// @requires _vector_norm
+/// @requires _vector_scale
+/// @param {real[]} u - Tail of direction vector.
+/// @param {real[]} v - Head of direction vector.
 /// @return {real[]} Vector pointing from u to v with norm 1.
 
 function _unit_vector(u, v)

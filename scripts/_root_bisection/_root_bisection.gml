@@ -1,10 +1,10 @@
 /// @func _root_bisection(f, a, b[, err[, cutoff]])
 /// @func Finds the root of a real-valued, continuous function on a specified interval using the bisection method.
-/// @param {function} f Function (which maps reals to reals) to find the root of. The signs of f(a) and f(b) must be opposite.
-/// @param {real} a Lower bound of search interval.
-/// @param {real} b Upper bound of search interval.
-/// @param {real} [err=0.01] Error bound to define stopping criterion. The search ends as soon as the bound falls below this value.
-/// @param {int} [cutoff=100] Iteration cutoff. The search ends as soon as the number of iterations crosses this bound, regardless of the error.
+/// @param {function} f - Function (which maps reals to reals) to find the root of. The signs of f(a) and f(b) must be opposite.
+/// @param {real} a - Lower bound of search interval.
+/// @param {real} b - Upper bound of search interval.
+/// @param {real} [err=0.01] - Error bound to define stopping criterion. The search ends as soon as the bound falls below this value.
+/// @param {int} [cutoff=100] - Iteration cutoff. The search ends as soon as the number of iterations crosses this bound, regardless of the error.
 /// @return {real} Estimate of root (or undefined in case of problem).
 
 function _root_bisection(f, a, b)

@@ -1,8 +1,8 @@
 /// @func _linspace(start, stop, n)
 /// @desc Generates a specified number of equally-spaced values within a specified range.
-/// @param {real} start First value of array.
-/// @param {real} stop Last value of array.
-/// @param {int} n Number of values in array. Must be at least 2 (unless the endpoints are equal).
+/// @param {real} start - First value of array.
+/// @param {real} stop - Last value of array.
+/// @param {int} n - Number of values in array. Must be at least 2 (unless the endpoints are equal).
 /// @return {real[]} An array with first value start, final value stop, and a total of n elements (or empty array in case of error).
 
 function _linspace(start, stop, n)

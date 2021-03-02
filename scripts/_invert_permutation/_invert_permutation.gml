@@ -1,6 +1,6 @@
 /// @func _invert_permutation(perm)
 /// @desc Creates the inverse of a given permutation array.
-/// @param {int[]} perm Permutation array, consisting of a sequence of indices 0, 1, 2, ...
+/// @param {int[]} perm - Permutation array, consisting of a sequence of indices 0, 1, 2, ...
 /// @return {int[]} Permutation array which inverts the permutation defined by perm (undefined in case of error).
 
 function _invert_permutation(perm)

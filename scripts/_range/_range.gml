@@ -1,8 +1,8 @@
 /// @func _range(start, stop[, step])
 /// @desc Generates an array of equally-spaced values over a specified range with a specified step size.
-/// @param {real} start First value of array.
-/// @param {real} stop Final value of array (if the step size evenly divides the array; otherwise gives an upper bound to the final value).
-/// @param {real} [step=1] Step size. May be positive if start <= stop and negative otherwise.
+/// @param {real} start - First value of array.
+/// @param {real} stop - Final value of array (if the step size evenly divides the array; otherwise gives an upper bound to the final value).
+/// @param {real} [step=1] - Step size. May be positive if start <= stop and negative otherwise.
 /// @return {real[]} Array of values beginning with start, incrementing by step, and ending with the last value that does not extend beyond stop.
 
 function _range(start, stop)

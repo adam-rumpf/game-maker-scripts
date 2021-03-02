@@ -1,9 +1,9 @@
 /// @func _vector_scale(v, r[, p])
 /// @desc Scales a vector so that it achieves a given (Lp-) norm while maintaining its direction.
 /// @requires _vector_norm
-/// @param {real[]} v Vector to scale.
-/// @param {real} r Target norm.
-/// @param {real} [p=2] Parameter to define Lp-norm (must be between 1 and infinity, inclusive).
+/// @param {real[]} v - Vector to scale.
+/// @param {real} r - Target norm.
+/// @param {real} [p=2] - Parameter to define Lp-norm (must be between 1 and infinity, inclusive).
 /// @return {real[]} Rescaled input vector with the specified norm.
 
 function _vector_scale(v, r)

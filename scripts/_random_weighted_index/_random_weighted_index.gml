@@ -1,6 +1,6 @@
 /// @func _random_weighted_index(wt)
 /// @desc Returns a random array index with probabilities defined by a given weight array.
-/// @param {real[]} wt Array of weights (corresponding to indices 0, 1, 2, ...). Negative weights are treated as zero.
+/// @param {real[]} wt - Array of weights (corresponding to indices 0, 1, 2, ...). Negative weights are treated as zero.
 /// @return {int} Randomly chosen array index.
 
 function _random_weighted_index(wt)

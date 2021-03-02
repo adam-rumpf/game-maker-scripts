@@ -1,7 +1,7 @@
 /// @func _vector_norm(v[, p])
 /// @desc Calculates a vector Lp-norm.
-/// @param {real[]} v Vector to evaluate the norm of.
-/// @param {real} [p=2] Parameter to define Lp-norm (must be between 1 and infinity, inclusive).
+/// @param {real[]} v - Vector to evaluate the norm of.
+/// @param {real} [p=2] - Parameter to define Lp-norm (must be between 1 and infinity, inclusive).
 /// @return {real} Lp-norm of v (or -1 if an error occurs).
 
 function _vector_norm(v)

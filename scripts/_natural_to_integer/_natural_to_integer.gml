@@ -1,6 +1,6 @@
 /// @func _natural_to_integer(n)
 /// @desc Returns a unique integer for a given natural number (beginning with 0), according to the straightforward zig-zagging bijection (0, 1, -1, 2, -2, ...).
-/// @param {int} n Natural number for which to generate a unique integer.
+/// @param {int} n - Natural number for which to generate a unique integer.
 /// @return {int} Integer corresponding to natural number n.
 /**
  * This function is meant to be the inverse of the _integer_to_natural()

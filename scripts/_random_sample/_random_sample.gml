@@ -1,8 +1,8 @@
 /// @func _random_sample(arr[, n[, rep]])
 /// @desc Generates random samples from a given array (either with or without replacement).
-/// @param {*[]} arr Array to gather samples from.
-/// @param {int} [n=1] Number of samples to gather. If n=1 a scalar is returned, and otherwise an array of samples is returned.
-/// @param {bool} [rep=true] True if sampling with replacement and false otherwise, in which case n is capped at the length of the input array.
+/// @param {*[]} arr - Array to gather samples from.
+/// @param {int} [n=1] - Number of samples to gather. If n=1 a scalar is returned, and otherwise an array of samples is returned.
+/// @param {bool} [rep=true] - True if sampling with replacement and false otherwise, in which case n is capped at the length of the input array.
 /// @return {*[]} Sample or array of samples (if n>1).
 
 function _random_sample(arr)

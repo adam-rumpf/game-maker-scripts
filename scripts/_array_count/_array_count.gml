@@ -1,7 +1,7 @@
 /// @func _array_count(arr, val)
 /// @desc Counts the number of occurrences of a value in an array.
-/// @param {*[]} arr Array to search.
-/// @param {*} val Value to count.
+/// @param {*[]} arr - Array to search.
+/// @param {*} val - Value to count.
 /// @return {int} Number of occurrences of val in arr.
 
 function _array_count(arr, val)
