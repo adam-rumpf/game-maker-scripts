@@ -63,3 +63,10 @@ Functions which involve randomization.
 
 * [`_random_weighted_index`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_weighted_index/_random_weighted_index.gml): Chooses a random array index with probabilities defined by a given weight array.
 * [`_random_sample`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_sample/_random_sample.gml): Draws a set of random samples from an array, either with or without replacement.
+
+## Shape Functions
+
+Functions for generating graphics primitives of various shapes. Each of the following functions returns an array of coordinate pairs which can be used as inputs for the built-in built-in [`draw_vertex()`](https://docs2.yoyogames.com/source/_build/3_scripting/4_gml_reference/drawing/primitives/draw_vertex.html) function for use in drawing [graphics primitives](https://docs2.yoyogames.com/source/_build/3_scripting/4_gml_reference/drawing/primitives/index.html).
+
+* [`_shape_arrow`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_shape_arrow/_shape_arrow.gml): Arrow pointing from one coordinate to another. Optional parameters can be used to adjust the thickness of the line and the size and shape of the arrowhead.
+* [`_shape_barbell`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_shape_barbell/_shape_barbell.gml): Line between two points with a circular bulge on each end. Optional parameters can be used to adjust the thickness of the line and the radii of the circles.
