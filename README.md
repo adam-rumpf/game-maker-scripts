@@ -79,7 +79,7 @@ Three main objects, `obj_graph`, `obj_vertex`, and `obj_edge` are defined to rep
 It is assumed that all vertices and edges belong to only one graph. Edges are directed, so if you would like for connections to be bidirectional, you must include one edge in each direction.
 
 * [`_create_graph`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_create_graph/_create_graph.gml): A function for generating a graph object with accompanying vertex and edge objects from a list of vertex indices and an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list). Optional arguments allow the vertex and edge attributes to be defined.
-* `obj_graph`: The main graph object. Attributes include:
+* `obj_graph`: The main graph object. On destruction, it automatically destroys all associated vertices and edges. Attributes include:
   * `v`: List of vertex objects.
   * `e`: List of edge objects.
 
