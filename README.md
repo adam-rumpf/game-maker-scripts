@@ -45,9 +45,12 @@ Numerical algorithms for computational mathematics.
 Common linear algebra algorithms for dealing with matrices and vectors. In all functions, _vectors_ are considered to be 1D arrays while _matrices_ are 2D arrays (i.e. arrays of arrays).
 
 * [`_coordinate_remap`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_coordinate_remap/_coordinate_remap.gml): Remaps a coordinate from one rectangular region to another.
+* [`_det`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_det/_det.gml): Calculates the determinant of a square matrix (using [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition)).
 * [`_linear_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_linear_solve/_linear_solve.gml): Solves a linear system of the form _Ax = b_ (using [Gaussian elimination with partial pivoting](https://en.wikipedia.org/wiki/Pivot_element)).
+* [`_lu`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_lu/_lu.gml): Produces the [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition) of a matrix, expressing it as a product of a lower triangular and an upper triangular matrix.
 * [`_matrix_multiply`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_multiply/_matrix_multiply.gml): Performs matrix-matrix, matrix-vector, and vector-vector multiplication.
 * [`_matrix_transpose`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_transpose/_matrix_transpose.gml): Transposes a 2D matrix.
+* [`_qr`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_qr/_qr.gml): Produces the [QR decomposition](https://en.wikipedia.org/wiki/QR_decomposition) of a matrix, expressing it as a product of a unitary matrix and an upper triangular matrix.
 * [`_tridiagonal_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_tridiagonal_solve/_tridiagonal_solve.gml): Solves a tridiagonal system (using the [Thomas algorithm](https://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm)).
 * [`_triangular_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_triangular_solve/_triangular_solve.gml): Solves an upper or lower triangular system (using [forward or back substitution](https://www.cs.cornell.edu/~bindel/class/cs6210-f12/notes/lec08.pdf)).
 * [`_unit_vector`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_unit_vector/_unit_vector.gml): Defines a unit direction vector between two coordinates.
