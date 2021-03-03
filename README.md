@@ -72,9 +72,11 @@ Functions which involve randomization.
 
 ## Graph Objects and Functions
 
-Objects and functions for representing graphs and networks (as abstract data structures on the "Instances" layer). Three main objects, `obj_graph`, `obj_vertex`, and `obj_edge` are defined to represent a graph, its vertices, and its edges, respectively. The main graph object consists mostly of a vertex array and an edge array, but also defines some methods for common graph algorithms like finding shortest paths. Graphs can technically be defined manually piece-by-piece, but it is recommended to instead make use of the included [`_create_graph`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_create_graph/_create_graph.gml) function, which automatically defines all necessary objects from an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) and returns the resulting graph object.
+Objects and functions for representing graphs and networks (as abstract data structures on the "Instances" layer). The graph objects are meant to act as abstract data structures, and so are included in the `scripts/graph` group alongside the graph functions.
 
-It is assumed that all vertices and edges belong to only one graph. Edges are directed, so if you would like for connections to be bidirectional, you should include one edge in each direction.
+Three main objects, `obj_graph`, `obj_vertex`, and `obj_edge` are defined to represent a graph, its vertices, and its edges, respectively. The main graph object consists mostly of a vertex array and an edge array, but also defines some methods for common graph algorithms (like finding shortest paths). Graphs can technically be defined manually, but it is recommended to instead make use of the included [`_create_graph`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_create_graph/_create_graph.gml) function, which automatically defines all necessary objects from an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) representation and returns the resulting graph object.
+
+It is assumed that all vertices and edges belong to only one graph. Edges are directed, so if you would like for connections to be bidirectional, you must include one edge in each direction.
 
 * [`_create_graph`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_create_graph/_create_graph.gml): A function for generating a graph object with accompanying vertex and edge objects from a list of vertex indices and an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list). Optional arguments allow the vertex and edge attributes to be defined.
 * `obj_graph`: The main graph object. Attributes include:
