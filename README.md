@@ -82,6 +82,11 @@ It is assumed that all vertices and edges belong to only one graph. Edges are di
   * `e`: List of edge objects.
 
   Methods include:
+  * `adjacency_list`: Returns the [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) of the graph, as a list of lists of vertex indices.
+  * `adjacency_matrix`: Returns the [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix) of the graph, as a matrix for which element _(i,j)_ indicates the number of edges (or the total weight of edges) from vertex _i_ to vertex _j_.
+  * `all_distances`: Finds the distance from one vertex to every other vertex in the graph (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
+  * `connected`: Determines whether the graph is (strongly) connected, or whether a given pair of vertices is (strongly) connected.
+  * `distance`: Finds the distance between two vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
   * `shortest_path`: Finds the shortest path between a pair of vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges. Returns the cost of the path, the sequence of vertices, and the sequence of edges.
 * `obj_vertex`: Vertex object. Attributes include:
   * `e_in`: List of incoming edge objects.

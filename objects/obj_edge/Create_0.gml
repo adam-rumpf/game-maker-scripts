@@ -3,5 +3,5 @@
 // Define default edge attributes (meant to be overwritten when the graph is defined)
 tail = undefined; // origin vertex object
 head = undefined; // destination vertex object
-cost = 0; // cost value (for use in path length calculation)
+cost = 1; // cost value (for use in path length calculation)
 capacity = infinity; // capacity value (for network flows)
