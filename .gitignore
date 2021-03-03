@@ -1,6 +1,6 @@
 _resources/
 datafiles/
-objects/
+objects/obj_test/
 options/
 rooms/
 *.yyp

@@ -1,10 +1,12 @@
 # GameMaker Studio 2 Mathematical Scripts
 
-A collection of general utility and mathematical functions for [GameMaker Studio 2](https://www.yoyogames.com/) (Version 2.3). These mostly consist of functions that I have found useful during my own game development, and I expect to periodically add more over time.
+A collection of general utility and mathematical objects and functions for [GameMaker Studio 2](https://www.yoyogames.com/) (Version 2.3). These mostly consist of utilities that I have found useful during my own game development, and I expect to periodically add more over time.
 
 A [local asset package](https://docs2.yoyogames.com/source/_build/2_interface/2_extras/local_asset_packages.html) containing all scripts can be found for free on the [releases](https://github.com/adam-rumpf/game-maker-scripts/releases) page or as donationware from my [itch.io page](https://adam-rumpf.itch.io/gamemaker-studio-2-mathematical-scripts). I encourage you to download it, use it in your own projects, and modify the source code as much as you like free of charge. If, however, you really, really want to pay for it and it is within your means to do so, I would not say no to your financial support.
 
 Each script defines a single function. Most functions are standalone and are meant to be taken à la carte, but some of the more mathematically complicated functions depend on other scripts, indicated in a `@requires` tag. All function names begin with an underscore (`_`) in order to distinguish them from built-in functions.
+
+All object names begin with the `obj_` prefix. Some include methods, which are always defined in the object's Create event.
 
 The following is a brief description of the included functions, divided into rough categories.
 
@@ -49,7 +51,7 @@ Common linear algebra algorithms for dealing with matrices and vectors. In all f
 * [`_matrix_det`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_det/_matrix_det.gml): Calculates the determinant of a square matrix (using [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition)).
 * [`_matrix_lu`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_lu/_matrix_lu.gml): Produces the [LU factorization](https://en.wikipedia.org/wiki/LU_decomposition) of a square matrix, expressing it as the product of a lower triangular matrix and an upper triangular matrix.
 * [`_matrix_multiply`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_multiply/_matrix_multiply.gml): Performs matrix-matrix, matrix-vector, and vector-vector multiplication.
-* [`_matrix_qr`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_qr/_matrix_qr.gml): Produces the [QR factorization](* [`_matrix_lu`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_lu/_matrix_lu.gml): Produces the [LU factorization](https://en.wikipedia.org/wiki/LU_decomposition) of a matrix.) of a matrix, expressing it as the product of a unitary matrix and an upper triangular matrix.
+* [`_matrix_qr`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_qr/_matrix_qr.gml): Produces the [QR factorization](https://en.wikipedia.org/wiki/QR_decomposition) of a matrix, expressing it as the product of a unitary matrix and an upper triangular matrix.
 * [`_matrix_trace`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_trace/_matrix_trace.gml): Calculates the trace (sum of diagonal elements) of a square matrix.
 * [`_matrix_transpose`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_transpose/_matrix_transpose.gml): Transposes a 2D matrix.
 * [`_tridiagonal_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_tridiagonal_solve/_tridiagonal_solve.gml): Solves a tridiagonal system (using the [Thomas algorithm](https://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm)).
@@ -67,6 +69,29 @@ Functions which involve randomization.
 
 * [`_random_weighted_index`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_weighted_index/_random_weighted_index.gml): Chooses a random array index with probabilities defined by a given weight array.
 * [`_random_sample`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_sample/_random_sample.gml): Draws a set of random samples from an array, either with or without replacement.
+
+## Graph Objects and Functions
+
+Objects and functions for representing graphs and networks (as abstract data structures on the "Instances" layer). Three main objects, `obj_graph`, `obj_vertex`, and `obj_edge` are defined to represent a graph, its vertices, and its edges, respectively. The main graph object consists mostly of a vertex array and an edge array, but also defines some methods for common graph algorithms like finding shortest paths. Graphs can technically be defined manually piece-by-piece, but it is recommended to instead make use of the included [`_create_graph`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_create_graph/_create_graph.gml) function, which automatically defines all necessary objects from an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) and returns the resulting graph object.
+
+It is assumed that all vertices and edges belong to only one graph. Edges are directed, so if you would like for connections to be bidirectional, you should include one edge in each direction.
+
+* [`_create_graph`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_create_graph/_create_graph.gml): A function for generating a graph object with accompanying vertex and edge objects from a list of vertex indices and an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list). Optional arguments allow the vertex and edge attributes to be defined.
+* `obj_graph`: The main graph object. Attributes include:
+  * `v`: List of vertex objects.
+  * `e`: List of edge objects.
+
+  Methods include:
+  * `shortest_path`: Finds the shortest path between a pair of vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges. Returns the cost of the path, the sequence of vertices, and the sequence of edges.
+* `obj_vertex`: Vertex object. Attributes include:
+  * `e_in`: List of incoming edge objects.
+  * `e_out`: List of outgoing edge objects.
+  * `supply`: Supply value, for potential use in [network flows](https://en.wikipedia.org/wiki/Flow_network) problems.
+* `obj_edge`: Edge object. Attributes include:
+  * `tail`: Origin vertex object.
+  * `head`: Destination vertex object.
+  * `cost`: Cost value, for use in minimum-cost path calculation.
+  * `capacity`: Capacity value, for potential use in [network flows](https://en.wikipedia.org/wiki/Flow_network) problems.
 
 ## Shape Functions
 
