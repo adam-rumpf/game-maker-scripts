@@ -39,15 +39,13 @@ function _ini_sections(fname)
 		
 		file_text_readln(f);
 	}
+	file_text_close(f);
 	
 	// Transfer queue contents into an array
 	var sections = array_create(ds_queue_size(q));
 	for (var i = 0; i < array_length(sections); i++)
 		sections[i] = ds_queue_dequeue(q);
 	ds_queue_destroy(q);
-	
-	// Close file
-	file_text_close(f);
 	
 	// Return section array
 	return sections;
