@@ -49,8 +49,10 @@ function _ini_keys(fname, sec)
 			}
 			
 			// Copy portion of key name before "=" sign (if present)
-			if (string_count("=", line) > 0)
-				ds_queue_enqueue(q, string_copy(line, 1, string_pos("=", line)));
+			if (string_count(" =", line) > 0)
+				ds_queue_enqueue(q, string_copy(line, 1, string_pos("=", line) - 2));
+			else if (string_count("=", line) > 0)
+				ds_queue_enqueue(q, string_copy(line, 1, string_pos("=", line) - 1));
 			else
 				ds_queue_enqueue(q, line);
 		}
