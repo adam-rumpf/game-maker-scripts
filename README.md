@@ -100,6 +100,13 @@ It is assumed that all vertices and edges belong to only one graph. Edges are di
   * `cost`: Cost value, for use in minimum-cost path calculation.
   * `capacity`: Capacity value, for potential use in [network flows](https://en.wikipedia.org/wiki/Flow_network) problems.
 
+## File Handling
+
+Functions for handling files, to cover some basic tasks that aren't built into GameMaker Studio.
+
+* [`_ini_keys`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ini_keys/_ini_keys.gml): Finds all keys in a given section of an [INI file](https://en.wikipedia.org/wiki/INI_file).
+* [`_ini_sections`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ini_sections/_ini_sections.gml): Finds all sections in a given [INI file](https://en.wikipedia.org/wiki/INI_file).
+
 ## Shape Functions
 
 Functions for generating graphics primitives of various shapes. Each of the following functions returns an array of coordinate pairs which can be used as inputs for the built-in built-in [`draw_vertex()`](https://docs2.yoyogames.com/source/_build/3_scripting/4_gml_reference/drawing/primitives/draw_vertex.html) function for use in drawing [graphics primitives](https://docs2.yoyogames.com/source/_build/3_scripting/4_gml_reference/drawing/primitives/index.html).
