@@ -35,12 +35,13 @@ Common array functions (such as searching and counting).
 
 ## Computational Mathematics Functions
 
-Numerical algorithms for computational mathematics.
+Numerical algorithms for computational mathematics, including things like root finding and interpolation.
 
 * [`_cubic_spline_coefficients`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_cubic_spline_coefficients/_cubic_spline_coefficients.gml): Calculates vectors of polynomial coefficients for the natural [cubic spline](https://en.wikipedia.org/wiki/Spline_interpolation) interpolating a given data set.
 * [`_cubic_spline_evaluate`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_cubic_spline_evaluate/_cubic_spline_evaluate.gml): Evaluates a piecewise cubic polynomial at a specific value given a given set of coefficient vectors and intervals.
 * [`_root_bisection`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_root_bisection/_root_bisection.gml): Finds the root of a continuous function on a specified interval using the [bisection method](https://en.wikipedia.org/wiki/Bisection_method). This requires that the function change sign over the interval.
 * [`_root_newton`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_root_newton/_root_newton.gml): Finds the root of a differentiable function using [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method). This requires an initial guess and a derivative function.
+* [`_smooth_step`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_smooth_step/_smooth_step.gml): A piecewise function that increases smoothly from _0_ to _1_ over the interval _[0, 1]_.
 
 ## Linear Algebra Functions
 
