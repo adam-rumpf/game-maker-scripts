@@ -4,15 +4,26 @@ A collection of general utility and mathematical objects and functions for [Game
 
 A [local asset package](https://docs2.yoyogames.com/source/_build/2_interface/2_extras/local_asset_packages.html) containing all scripts can be found for free on the [releases](https://github.com/adam-rumpf/game-maker-scripts/releases) page or as donationware from my [itch.io page](https://adam-rumpf.itch.io/gamemaker-studio-2-mathematical-scripts). I encourage you to download it, use it in your own projects, and modify the source code as much as you like free of charge. If, however, you really, really want to pay for it and it is within your means to do so, I would not say no to your financial support.
 
-Each script defines a single function. Most functions are standalone and are meant to be taken à la carte, but some of the more mathematically complicated functions depend on other scripts, indicated in a `@requires` tag. All function names begin with an underscore (`_`) in order to distinguish them from built-in functions.
+Each script defines a single function. Most functions are standalone and are meant to be taken à la carte, but some of the more mathematically complicated functions depend on other scripts, indicated in a `@requires` tag.
 
-All object names begin with the `obj_` prefix. Some include methods, which are always defined in the object's Create event.
+All function names begin with an underscore (`_`) in order to distinguish them from built-in functions. All object names begin with the `obj_` prefix. Some include methods, which are always defined in the object's Create event.
 
 The following is a brief description of the included functions, divided into rough categories.
 
+## Categories
+
+* [Analysis Functions](#analysis-functions)
+* [Array Functions](#array-functions)
+* [Computational Mathematics Functions](#computational-mathematics-functions)
+* [Linear Algebra Functions](#linear-algebra-functions)
+* [Random Functions](#random-functions)
+* [Graph Objects and Functions](#graph-objects-and-functions)
+* [File Handling](#file-handling)
+* [Shape Functions](#shape-functions)
+
 ## Analysis Functions
 
-A variety of scripts dealing with sequences, functions, and sets, which may have some uses for managing data structures.
+A variety of scripts dealing with sequences, functions, and sets, which may have some uses for managing data structures. For example, the various pairing and inverse pairing functions can be used to store pairs of numbers as single numbers in data structures (like stacks and queues) and then recovered.
 
 * [`_integer_pair_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_pair_to_natural/_integer_pair_to_natural.gml): Maps an ordered pair of integers to a unique natural number (by composing `_nautral_pair_to_natural` on `_integer_to_natural`). This is the inverse of `_natural_to_integer_pair`.
 * [`_integer_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_to_natural/_integer_to_natural.gml): Maps an integer to a unique natural number using the zig-zagging bijection from _(0, 1, -1, 2, -2, ...)_ to _(0, 1, 2, 3, 4, ...)_. This is the inverse of `_natural_to_integer`.
@@ -51,10 +62,7 @@ Common linear algebra algorithms for dealing with matrices and vectors. In all f
 
 * [`_coordinate_remap`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_coordinate_remap/_coordinate_remap.gml): Remaps a coordinate from one rectangular region to another.
 * [`_linear_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_linear_solve/_linear_solve.gml): Solves a linear system of the form _Ax = b_ (using [Gaussian elimination with partial pivoting](https://en.wikipedia.org/wiki/Pivot_element)).
-* [`_matrix_det`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_det/_matrix_det.gml): Calculates the determinant of a square matrix (using [LU decomposition](https://en.wikipedia.org/wiki/LU_decomposition)).
-* [`_matrix_lu`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_lu/_matrix_lu.gml): Produces the [LU factorization](https://en.wikipedia.org/wiki/LU_decomposition) of a square matrix, expressing it as the product of a lower triangular matrix and an upper triangular matrix.
 * [`_matrix_multiply`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_multiply/_matrix_multiply.gml): Performs matrix-matrix, matrix-vector, and vector-vector multiplication.
-* [`_matrix_qr`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_qr/_matrix_qr.gml): Produces the [QR factorization](https://en.wikipedia.org/wiki/QR_decomposition) of a matrix, expressing it as the product of a unitary matrix and an upper triangular matrix.
 * [`_matrix_trace`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_trace/_matrix_trace.gml): Calculates the trace (sum of diagonal elements) of a square matrix.
 * [`_matrix_transpose`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_matrix_transpose/_matrix_transpose.gml): Transposes a 2D matrix.
 * [`_tridiagonal_solve`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_tridiagonal_solve/_tridiagonal_solve.gml): Solves a tridiagonal system (using the [Thomas algorithm](https://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm)).
@@ -83,25 +91,25 @@ It is assumed that all vertices and edges belong to only one graph. Edges are di
 
 * [`_create_graph`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_create_graph/_create_graph.gml): A function for generating a graph object with accompanying vertex and edge objects from a list of vertex indices and an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list). Optional arguments allow the vertex and edge attributes to be defined.
 * `obj_graph`: The main graph object. On destruction, it automatically destroys all associated vertices and edges. Attributes include:
-  * `v`: List of vertex objects.
-  * `e`: List of edge objects.
+  * `obj_graph.v`: List of vertex objects.
+  * `obh_graph.e`: List of edge objects.
 
   Methods include:
-  * `adjacency_list`: Returns the [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) of the graph, as a list of lists of vertex indices.
-  * `adjacency_matrix`: Returns the [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix) of the graph, as a matrix for which element _(i,j)_ indicates the number of edges (or the total weight of edges) from vertex _i_ to vertex _j_.
-  * `all_distances`: Finds the distance from one vertex to every other vertex in the graph (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
-  * `connected`: Determines whether the graph is (strongly) connected, or whether a given pair of vertices is (strongly) connected.
-  * `distance`: Finds the distance between two vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
-  * `shortest_path`: Finds the shortest path between a pair of vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges. Returns the cost of the path, the sequence of vertices, and the sequence of edges.
+  * `obj_graph.adjacency_list`: Returns the [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) of the graph, as a list of lists of vertex indices.
+  * `obj_graph.adjacency_matrix`: Returns the [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix) of the graph, as a matrix for which element _(i,j)_ indicates the number of edges (or the total weight of edges) from vertex _i_ to vertex _j_.
+  * `obj_graph.all_distances`: Finds the distance from one vertex to every other vertex in the graph (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
+  * `obj_graph.connected`: Determines whether the graph is (strongly) connected, or whether a given pair of vertices is (strongly) connected.
+  * `obj_graph.distance`: Finds the distance between two vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
+  * `obj_graph.shortest_path`: Finds the shortest path between a pair of vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges. Returns the cost of the path, the sequence of vertices, and the sequence of edges.
 * `obj_vertex`: Vertex object. Attributes include:
-  * `e_in`: List of incoming edge objects.
-  * `e_out`: List of outgoing edge objects.
-  * `supply`: Supply value, for potential use in [network flows](https://en.wikipedia.org/wiki/Flow_network) problems.
+  * `obj_vertex.e_in`: List of incoming edge objects.
+  * `obj_vertex.e_out`: List of outgoing edge objects.
+  * `obj_vertex.supply`: Supply value, for potential use in [network flows](https://en.wikipedia.org/wiki/Flow_network) problems.
 * `obj_edge`: Edge object. Attributes include:
-  * `tail`: Origin vertex object.
-  * `head`: Destination vertex object.
-  * `cost`: Cost value, for use in minimum-cost path calculation.
-  * `capacity`: Capacity value, for potential use in [network flows](https://en.wikipedia.org/wiki/Flow_network) problems.
+  * `obj_edge.tail`: Origin vertex object.
+  * `obj_edge.head`: Destination vertex object.
+  * `obj_edge.cost`: Cost value, for use in minimum-cost path calculation.
+  * `obj_edge.capacity`: Capacity value, for potential use in [network flows](https://en.wikipedia.org/wiki/Flow_network) problems.
 
 ## File Handling
 
@@ -109,10 +117,3 @@ Functions for handling files, to cover some basic tasks that aren't built into G
 
 * [`_ini_keys`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ini_keys/_ini_keys.gml): Finds all keys in a given section of an [INI file](https://en.wikipedia.org/wiki/INI_file).
 * [`_ini_sections`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ini_sections/_ini_sections.gml): Finds all sections in a given [INI file](https://en.wikipedia.org/wiki/INI_file).
-
-## Shape Functions
-
-Functions for generating graphics primitives of various shapes. Each of the following functions returns an array of coordinate pairs which can be used as inputs for the built-in built-in [`draw_vertex()`](https://docs2.yoyogames.com/source/_build/3_scripting/4_gml_reference/drawing/primitives/draw_vertex.html) function for use in drawing [graphics primitives](https://docs2.yoyogames.com/source/_build/3_scripting/4_gml_reference/drawing/primitives/index.html).
-
-* [`_shape_arrow`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_shape_arrow/_shape_arrow.gml): Arrow pointing from one coordinate to another. Optional parameters can be used to adjust the thickness of the line and the size and shape of the arrowhead.
-* [`_shape_barbell`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_shape_barbell/_shape_barbell.gml): Line between two points with a circular bulge on each end. Optional parameters can be used to adjust the thickness of the line and the radii of the circles.
