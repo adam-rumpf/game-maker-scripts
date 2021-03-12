@@ -6,4 +6,10 @@
 /// @param {int} [base=2] - Base of the number system.
 /// @return {int[][]} Array of arrays of output states (dimensions 'base^size' x 'size'), listing the output for every possible input tuple in descending order (see _k_tuples).
 
-//###
+function _ca_wolfram_decode(code, size)
+{
+	// Get base
+	var base = (argument_count > 2 ? argument[2] : 2);
+	
+	// 
+}

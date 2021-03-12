@@ -30,11 +30,11 @@ function _k_tuples(k)
 			row = power(b, k) - i - 1;
 		
 		// Convert to base b (with padding)
-		var arr = _decimal_to_base(i, b, k);
+		var arr = _decimal_to_base(i, b, true, k);
 		
-		// Read digits in reverse order into tuple array
+		// Read digits into tuple array
 		for (var j = 0; j < k; j++)
-			tuples[row][j] = arr[k-j-1];
+			tuples[row][j] = arr[j];
 	}
 	
 	return tuples;
