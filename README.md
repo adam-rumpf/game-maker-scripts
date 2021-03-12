@@ -18,6 +18,7 @@ The following is a brief description of the included functions, divided into rou
 * [Linear Algebra Functions](#linear-algebra-functions)
 * [Random Functions](#random-functions)
 * [Graph Objects and Functions](#graph-objects-and-functions)
+* [Cellular Automata Functions](#cellular-automata-functions)
 * [File Handling](#file-handling)
 * [Shape Functions](#shape-functions)
 
@@ -81,6 +82,14 @@ Functions which involve randomization.
 
 * [`_random_weighted_index`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_weighted_index/_random_weighted_index.gml): Chooses a random array index with probabilities defined by a given weight array.
 * [`_random_sample`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_sample/_random_sample.gml): Draws a set of random samples from an array, either with or without replacement.
+
+## Cellular Automata Functions
+
+Functions for [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton) (CA) models. Most models are defined using a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code), an integer index that uniquely defines all possible input/output pairs for a given state space. Wolfram codes are generally indexed using a descending sequence of _k_-tuples, which can be generated using the `_k_tuples` function from the [Analysis Functions](#analysis-functions) section.
+
+* [`_ca_elementary`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ca_elementary/_ca_elementary.gml): Evaluates an [elementary CA](https://en.wikipedia.org/wiki/Elementary_cellular_automaton) on a 1D array, based on a rule defined by its [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code).
+* [`_ca_wolfram_decode`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ca_wolfram_decode/_ca_wolfram_decode.gml): Converts a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code) into an explicit list of ordered output tuples. The inverse of `_ca_wolfram_encode`.
+* [`_ca_wolfram_encode`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ca_wolfram_encode/_ca_wolfram_encode.gml): Generates the [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code) for a given complete list of output tuples. The inverse of `_ca_wolfram_decode`.
 
 ## Graph Objects and Functions
 

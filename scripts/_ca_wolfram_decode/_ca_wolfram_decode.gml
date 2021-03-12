@@ -7,5 +7,3 @@
 /// @return {int[][]} Array of arrays of output states (dimensions 'base^size' x 'size'), listing the output for every possible input tuple in descending order (see _k_tuples).
 
 //###
-
-//### Add a CA section to the README.

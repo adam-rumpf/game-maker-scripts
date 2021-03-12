@@ -10,5 +10,3 @@
 //### Ensure that all 'states' elements are length 'size'
 //### Ensure that 'states' includes exactly base^size elements.
 //### Validate integer ranges of all elements and input arguments.
-
-//### Add a CA section to the README.

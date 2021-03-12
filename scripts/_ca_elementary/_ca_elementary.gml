@@ -8,5 +8,3 @@ function _ca_elementary(input, rule)
 {
 	//###
 }
-
-//### Add a CA section to the README.
