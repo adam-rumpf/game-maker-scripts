@@ -88,7 +88,7 @@ Functions which involve randomization.
 
 ## Cellular Automata Functions
 
-Functions for [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton) (CA) models. Most models are defined using a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code), an integer index that uniquely defines all possible input/output pairs for a given state space. Wolfram codes are generally indexed using a descending sequence of _k_-tuples, which can be generated using the `_k_tuples` function from the [Analysis Functions](#number-theory-functions) section.
+Functions for [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton) (CA) models. Most models are defined using a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code), an integer index that uniquely defines all possible input/output pairs for a given state space. Wolfram codes are generally indexed to correspond to a descending sequence of _k_-tuples, which can be generated using the `_k_tuples` function from the [Analysis Functions](#number-theory-functions) section.
 
 * [`_ca_elementary`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ca_elementary/_ca_elementary.gml): Evaluates an [elementary CA](https://en.wikipedia.org/wiki/Elementary_cellular_automaton) on a 1D array, based on a rule defined by its [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code).
 * [`_ca_wolfram_decode`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ca_wolfram_decode/_ca_wolfram_decode.gml): Converts a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code) into an explicit list of ordered output tuples. The inverse of `_ca_wolfram_encode`.
