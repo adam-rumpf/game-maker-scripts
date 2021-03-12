@@ -12,7 +12,7 @@ The following is a brief description of the included functions, divided into rou
 
 ## Categories
 
-* [Analysis Functions](#analysis-functions)
+* [Number Theory Functions](#number-theory-functions)
 * [Array Functions](#array-functions)
 * [Computational Mathematics Functions](#computational-mathematics-functions)
 * [Linear Algebra Functions](#linear-algebra-functions)
@@ -22,10 +22,12 @@ The following is a brief description of the included functions, divided into rou
 * [File Handling](#file-handling)
 * [Shape Functions](#shape-functions)
 
-## Analysis Functions
+## Number Theory Functions
 
 A variety of scripts dealing with sequences, functions, and sets, which may have some uses for managing data structures. For example, the various pairing and inverse pairing functions can be used to store pairs of numbers as single numbers in data structures (like stacks and queues) and then recovered.
 
+* [`_base_to_decimal`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_base_to_decimal/_base_to_decimal.gml): Converts a number from an array of base-_b_ digits to decimal. The inverse of `_decimal_to_base`.
+* [`_decimal_to_base`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_decimal_to_base/_decimal_to_base.gml): Converts a number from decimal to an array of base-_b_ digits. The inverse of `_base_to_decimal`.
 * [`_integer_pair_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_pair_to_natural/_integer_pair_to_natural.gml): Maps an ordered pair of integers to a unique natural number (by composing `_nautral_pair_to_natural` on `_integer_to_natural`). This is the inverse of `_natural_to_integer_pair`.
 * [`_integer_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_to_natural/_integer_to_natural.gml): Maps an integer to a unique natural number using the zig-zagging bijection from _(0, 1, -1, 2, -2, ...)_ to _(0, 1, 2, 3, 4, ...)_. This is the inverse of `_natural_to_integer`.
 * [`_k_tuples`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_k_tuples/_k_tuples.gml): Generates an array of all possible base-_b_ _k_-tuples, in ascending (or descending) order.
@@ -85,7 +87,7 @@ Functions which involve randomization.
 
 ## Cellular Automata Functions
 
-Functions for [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton) (CA) models. Most models are defined using a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code), an integer index that uniquely defines all possible input/output pairs for a given state space. Wolfram codes are generally indexed using a descending sequence of _k_-tuples, which can be generated using the `_k_tuples` function from the [Analysis Functions](#analysis-functions) section.
+Functions for [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton) (CA) models. Most models are defined using a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code), an integer index that uniquely defines all possible input/output pairs for a given state space. Wolfram codes are generally indexed using a descending sequence of _k_-tuples, which can be generated using the `_k_tuples` function from the [Analysis Functions](#number-theory-functions) section.
 
 * [`_ca_elementary`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ca_elementary/_ca_elementary.gml): Evaluates an [elementary CA](https://en.wikipedia.org/wiki/Elementary_cellular_automaton) on a 1D array, based on a rule defined by its [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code).
 * [`_ca_wolfram_decode`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ca_wolfram_decode/_ca_wolfram_decode.gml): Converts a [Wolfram code](https://en.wikipedia.org/wiki/Wolfram_code) into an explicit list of ordered output tuples. The inverse of `_ca_wolfram_encode`.

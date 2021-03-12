@@ -19,5 +19,20 @@ function _k_tuples(k)
 	
 	// Initialize output array
 	var tuples = array_create(power(b, k), array_create(k, 0));
-	//###
+	
+	// Loop through all numbers in ascending or descending order
+	if (descending == false)
+	{
+		for (var i = 0; i < power(b, k); i++)
+		{
+			// Convert to base b
+		}
+	}
+	else
+	{
+		for (var i = power(b, k) - 1; i >= 0; i--)
+		{
+			
+		}
+	}
 }
