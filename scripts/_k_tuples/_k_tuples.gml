@@ -1,5 +1,6 @@
 /// @func _k_tuples(k[, b[, descending]])
 /// @desc Generates an array of every possible k-tuple of base-b integers, in lexicographically ascending (or descending) order.
+/// @requires _decimal_to_base
 /// @param {int} k - Number of elements in each k-tuple.
 /// @param {int} [b=2] - Base of the number system.
 /// @param {bool} [descending=false] - Whether to list the tuples in descending order rather than ascending.
@@ -21,18 +22,20 @@ function _k_tuples(k)
 	var tuples = array_create(power(b, k), array_create(k, 0));
 	
 	// Loop through all numbers in ascending or descending order
-	if (descending == false)
+	for (var i = 0; i < power(b, k); i++)
 	{
-		for (var i = 0; i < power(b, k); i++)
-		{
-			// Convert to base b
-		}
+		// Find array coordinate to use depending on whether the sequence is ascending or descending
+		var row = i;
+		if (descending == true)
+			row = power(b, k) - i - 1;
+		
+		// Convert to base b (with padding)
+		var arr = _decimal_to_base(i, b, k);
+		
+		// Read digits in reverse order into tuple array
+		for (var j = 0; j < k; j++)
+			tuples[row][j] = arr[k-j-1];
 	}
-	else
-	{
-		for (var i = power(b, k) - 1; i >= 0; i--)
-		{
-			
-		}
-	}
+	
+	return tuples;
 }
