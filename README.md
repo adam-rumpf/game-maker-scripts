@@ -27,8 +27,11 @@ The following is a brief description of the included functions, divided into rou
 A variety of scripts dealing with sequences, functions, and sets, which may have some uses for managing data structures. For example, the various pairing and inverse pairing functions can be used to store pairs of numbers as single numbers in data structures (like stacks and queues) and then recovered.
 
 * [`_base_to_decimal`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_base_to_decimal/_base_to_decimal.gml): Converts a number from an array of base-_b_ digits to decimal. The inverse of `_decimal_to_base`.
+* [`_ceil`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_ceil/_ceil.gml): Generalized ceiling function which accepts a step size argument.
 * [`_decimal_to_base`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_decimal_to_base/_decimal_to_base.gml): Converts a number from decimal to an array of base-_b_ digits. The inverse of `_base_to_decimal`.
 * [`_factorial`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_factorial/_factorial.gml): Calculates the factorial (_n!_) of a nonnegative integer.
+* [`_floor`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_floor/_floor.gml): Generalized floor function which accepts a step size argument.
+* [`_frac`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_frac/_frac.gml): Generalized fractional part function which accepts a step size argument.
 * [`_integer_pair_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_pair_to_natural/_integer_pair_to_natural.gml): Maps an ordered pair of integers to a unique natural number (by composing `_nautral_pair_to_natural` on `_integer_to_natural`). This is the inverse of `_natural_to_integer_pair`.
 * [`_integer_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_integer_to_natural/_integer_to_natural.gml): Maps an integer to a unique natural number using the zig-zagging bijection from _(0, 1, -1, 2, -2, ...)_ to _(0, 1, 2, 3, 4, ...)_. This is the inverse of `_natural_to_integer`.
 * [`_k_tuples`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_k_tuples/_k_tuples.gml): Generates an array of all possible base-_b_ _k_-tuples, in ascending (or descending) order.
@@ -36,6 +39,7 @@ A variety of scripts dealing with sequences, functions, and sets, which may have
 * [`_natural_to_integer_pair`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_natural_to_integer_pair/_natural_to_integer_pair.gml): Maps a natural number to a unique ordered pair of integers (by composing `_nautral_to_integer` on `_natural_to_natural_pair`). This is the inverse of `_integer_pair_to_natural`.
 * [`_natural_to_natural_pair`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_natural_to_natural_pair/_natural_to_natural_pair.gml): Maps a natural number to a unique ordered pair of natural numbers using the [inverse Cantor pairing function](https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function). This is the inverse of `_pair_to_natural`.
 * [`_natural_pair_to_natural`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_natural_pair_to_natural/_natural_pair_to_natural.gml): Maps an ordered pair of natural numbers to a unique natural number using the [Cantor pairing function](https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function). This is the inverse of `_natural_to_pair`.
+* [`_round`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_round/_round.gml): Generalized rounding function which accepts a step size argument.
 
 ## Array Functions
 
@@ -84,8 +88,9 @@ Common linear algebra algorithms for dealing with matrices and vectors. In all f
 
 Functions which involve randomization.
 
-* [`_random_weighted_index`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_weighted_index/_random_weighted_index.gml): Chooses a random array index with probabilities defined by a given weight array.
+* [`_random_round`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_round/_random_round.gml): Rounds a number either up or down to an integer value with a probability based on its fractional part.
 * [`_random_sample`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_sample/_random_sample.gml): Draws a set of random samples from an array, either with or without replacement.
+* [`_random_weighted_index`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_weighted_index/_random_weighted_index.gml): Chooses a random array index with probabilities defined by a given weight array.
 
 ## Cellular Automata Functions
 
