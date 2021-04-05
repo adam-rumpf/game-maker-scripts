@@ -1,5 +1,7 @@
 # GameMaker Studio 2 Mathematical Scripts
 
+<a href="https://adam-rumpf.itch.io/gamemaker-studio-2-mathematical-scripts"><img src="https://img.shields.io/badge/download-itch.io-fa5c5c?style=plastic&logo=itch.io&logoColor=white" alt="itch.io page"/></a> <img src="https://img.shields.io/badge/language-gml-blue?style=plastic"/> <img src="https://img.shields.io/github/v/release/adam-rumpf/game-maker-scripts?style=plastic"/> <img src="https://img.shields.io/github/license/adam-rumpf/game-maker-scripts?style=plastic"/> <img src="https://img.shields.io/maintenance/yes/2021?style=plastic"/>
+
 A collection of general utility and mathematical functions for [GameMaker Studio 2](https://www.yoyogames.com/) (Version 2.3). These mostly consist of functions that I have found useful during my own game development, and I expect to periodically add more over time.
 
 A [local asset package](https://docs2.yoyogames.com/source/_build/2_interface/2_extras/local_asset_packages.html) containing all scripts can be found on the [releases](https://github.com/adam-rumpf/game-maker-scripts/releases) or from my [itch.io page](https://adam-rumpf.itch.io/gamemaker-studio-2-mathematical-scripts). I encourage you to download it, use it in your own projects, and modify the source code as much as you like.
