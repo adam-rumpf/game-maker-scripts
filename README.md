@@ -116,12 +116,12 @@ It is assumed that all vertices and edges belong to only one graph. Edges are di
   * `obh_graph.e`: List of edge objects.
 
   Methods include:
-  * `obj_graph.adjacency_list`: Returns the [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) of the graph, as a list of lists of vertex indices.
-  * `obj_graph.adjacency_matrix`: Returns the [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix) of the graph, as a matrix for which element _(i,j)_ indicates the number of edges (or the total weight of edges) from vertex _i_ to vertex _j_.
-  * `obj_graph.all_distances`: Finds the distance from one vertex to every other vertex in the graph (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
-  * `obj_graph.connected`: Determines whether the graph is (strongly) connected, or whether a given pair of vertices is (strongly) connected.
-  * `obj_graph.distance`: Finds the distance between two vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
-  * `obj_graph.shortest_path`: Finds the shortest path between a pair of vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges. Returns the cost of the path, the sequence of vertices, and the sequence of edges.
+  * [`obj_graph.adjacency_list`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/objects/obj_graph/Create_0.gml#L48): Returns the [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) of the graph, as a list of lists of vertex indices.
+  * [`obj_graph.adjacency_matrix`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/objects/obj_graph/Create_0.gml#L11): Returns the [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix) of the graph, as a matrix for which element _(i,j)_ indicates the number of edges (or the total weight of edges) from vertex _i_ to vertex _j_.
+  * [`obj_graph.all_distances`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/objects/obj_graph/Create_0.gml#L193): Finds the distance from one vertex to every other vertex in the graph (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
+  * [`obj_graph.connected`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/objects/obj_graph/Create_0.gml#L248): Determines whether the graph is (strongly) connected, or whether a given pair of vertices is (strongly) connected.
+  * [`obj_graph.distance`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/objects/obj_graph/Create_0.gml#L182): Finds the distance between two vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges.
+  * [`obj_graph.shortest_path`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/objects/obj_graph/Create_0.gml#L73): Finds the shortest path between a pair of vertices (using [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) based on the `cost` attributes of the edges. Returns the cost of the path, the sequence of vertices, and the sequence of edges.
 * `obj_vertex`: Vertex object. Attributes include:
   * `obj_vertex.e_in`: List of incoming edge objects.
   * `obj_vertex.e_out`: List of outgoing edge objects.
