@@ -1,7 +1,7 @@
 /// @func _linear_solve(a, b)
 /// @desc Solves a linear system of the form Ax = b (via Gaussian elimination with partial pivoting) for a given coefficient matrix and constant vector.
-/// @param {real[][]} a Square coefficient matrix.
-/// @param {real[]} b Constant vector (as an array whose length matches a).
+/// @param {real[][]} a - Square coefficient matrix.
+/// @param {real[]} b - Constant vector (as an array whose length matches a).
 /// @return {real[]} Solution vector x of the linear system Ax = b (undefined in case of inconsistent dimensions or singular matrix).
 
 function _linear_solve(a, b)

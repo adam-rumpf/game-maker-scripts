@@ -1,7 +1,7 @@
 /// @func _vector_angle(u, v)
 /// @desc Calculates the angle (in radians) between a pair of vectors.
-/// @param {real[]} u First vector.
-/// @param {real[]} v Second vector.
+/// @param {real[]} u - First vector.
+/// @param {real[]} v - Second vector.
 /// @return {real} Measure (in radians) of the acute angle between u and v (returns undefined if dimensions incompatible).
 
 function _vector_angle(u, v)

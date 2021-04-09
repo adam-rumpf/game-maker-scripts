@@ -1,7 +1,7 @@
 /// @func _vector_rotate(v, theta)
 /// @desc Rotates a 2D vector by a specified angle (in radians counterclockwise).
-/// @param {real[]} v 2D vector to rotate.
-/// @param {real} theta Angle of rotation (in radians, with positive being counterclockwise).
+/// @param {real[]} v - 2D vector to rotate.
+/// @param {real} theta - Angle of rotation (in radians, with positive being counterclockwise).
 /// @return {real[]} Rotated 2D vector.
 
 function _vector_rotate(v, theta)

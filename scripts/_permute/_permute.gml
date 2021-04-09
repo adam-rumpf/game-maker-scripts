@@ -1,7 +1,7 @@
 /// @func _permute(arr, perm)
 /// @desc Permutes a given array according to a given permutation array.
-/// @param {*[]} arr Array to be permuted.
-/// @param {int[]} perm Permutation array (length must match arr and consist of consecutive integers 0, 1, 2, ...).
+/// @param {*[]} arr - Array to be permuted.
+/// @param {int[]} perm - Permutation array (length must match arr and consist of consecutive integers 0, 1, 2, ...).
 /// @return {*[]} Array consisting of values in arr permutated according to perm (or original array if lengths mismatch).
 
 function _permute(arr, perm)

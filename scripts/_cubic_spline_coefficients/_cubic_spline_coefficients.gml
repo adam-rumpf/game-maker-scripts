@@ -1,8 +1,8 @@
 /// @func _cubic_spline_coefficients(x, y)
 /// @desc Calculates the coefficients for a natural cubic spline interpolating a set of points.
 /// @requires _tridiagonal_solve
-/// @param {real[]} x Sample inputs, as a 1D array in ascending order.
-/// @param {real[]} y Sample outputs, as a 1D array the same length as the input array.
+/// @param {real[]} x - Sample inputs, as a 1D array in ascending order.
+/// @param {real[]} y - Sample outputs, as a 1D array the same length as the input array.
 /// @return {real[][]} Set of coefficients to define each segment of the natural cubic spline (see documentation for details), undefined in case of error.
 /**
  * For a data set of the form [x0, x1, ..., xn], [y0, y1, ..., yn], the natural cubic spline

@@ -1,11 +1,11 @@
 /// @func _cubic_spline_evaluate(a, b, c, d, x, t)
-/// @desc Evaluates a natural cubic spline at point t for coefficient vectors a, b, c, and d and input data vector x.
-/// @param {real[]} a Vector of cubic coefficients [a0, a1, ..., a(n-1)].
-/// @param {real[]} b Vector of quadratic coefficients [b0, b1, ..., b(n-1)].
-/// @param {real[]} c Vector of linear coefficients [c0, c1, ..., c(n-1)].
-/// @param {real[]} d Vector of contant coefficients [d0, d1, ..., d(n-1)].
-/// @param {real[]} x Vector of sample input values [x0, x1, ..., xn], in ascending order.
-/// @param {real} t Value at which to evaluate the spline.
+/// @desc Evaluates a - natural cubic spline at point t for coefficient vectors a, b, c, and d and input data vector x.
+/// @param {real[]} a - Vector of cubic coefficients [a0, a1, ..., a(n-1)].
+/// @param {real[]} b - Vector of quadratic coefficients [b0, b1, ..., b(n-1)].
+/// @param {real[]} c - Vector of linear coefficients [c0, c1, ..., c(n-1)].
+/// @param {real[]} d - Vector of contant coefficients [d0, d1, ..., d(n-1)].
+/// @param {real[]} x - Vector of sample input values [x0, x1, ..., xn], in ascending order.
+/// @param {real} t - Value at which to evaluate the spline.
 /// @return {real} Value of spline function evaluated at point t, depending on which interval if falls into, undefined in case of array size mismatch.
 /**
  * For a data set of the form [x0, x1, ..., xn], [y0, y1, ..., yn], the cubic spline
