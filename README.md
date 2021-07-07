@@ -88,6 +88,7 @@ Common linear algebra algorithms for dealing with matrices and vectors. In all f
 
 Functions which involve randomization.
 
+* [`_random_permutation`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_weighted_index/_random_permutation.gml): Generates a uniform random permutation array of a given length (suitable for use in the `_permute` and `_invert_permutation` functions).
 * [`_random_round`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_round/_random_round.gml): Rounds a number either up or down to an integer value with a probability based on its fractional part.
 * [`_random_sample`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_sample/_random_sample.gml): Draws a set of random samples from an array, either with or without replacement.
 * [`_random_weighted_index`](https://github.com/adam-rumpf/game-maker-scripts/blob/master/scripts/_random_weighted_index/_random_weighted_index.gml): Chooses a random array index with probabilities defined by a given weight array.
