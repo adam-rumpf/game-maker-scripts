@@ -22,7 +22,6 @@ The following is a brief description of the included functions, divided into rou
 * [Graph Objects and Functions](#graph-objects-and-functions)
 * [Cellular Automata Functions](#cellular-automata-functions)
 * [File Handling](#file-handling)
-* [Shape Functions](#shape-functions)
 
 ## Number Theory Functions
 
