@@ -13,6 +13,12 @@ function _ceil(xx)
 	if (step <= 0)
 		return undefined;
 	
-	// Subtract generalized fractional part from x and add one step
-	return xx - (xx mod step) + step;
+	// Determine ceiling depending on whether the number is a multiple of the step
+	if ((xx mod step) == 0)
+		return xx;
+	else
+	{
+		// Subtract generalized fractional part from x and add one step
+		return xx - (xx mod step) + step;
+	}
 }
