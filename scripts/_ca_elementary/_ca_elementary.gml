@@ -32,7 +32,7 @@ function _ca_elementary(input, rule)
 	// Generate a map of input/output pairs, using a string version of each neighborhood tuple as a key
 	var tuples = _k_tuples(3, base, true); // list of k-tuples
 	var map = ds_map_create(); // rule map
-	for (var i = 0; i < array_length(tuples); i++)
+	for (var i = 0, n = array_length(tuples); i < n; i++)
 	{
 		// Convert tuple to string
 		var str = string(tuples[i][0]) + string(tuples[i][1]) + string(tuples[i][2]);
