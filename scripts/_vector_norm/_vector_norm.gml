@@ -19,12 +19,9 @@ function _vector_norm(v)
 		// Infinity-norm
 		
 		// Calculate the maximum value of |vi|
-		var maxval = -infinity;
-		for (var i = 0; i < array_length(v); i++)
-		{
-			if (abs(v[i]) > maxval)
-				maxval = abs(v[i]);
-		}
+		var maxval = array_reduce(v, function(previous, current, index) {
+            return max(previous, abs(current));
+        }, -infinity);
 		
 		// Return the maximum
 		return maxval;
@@ -34,9 +31,9 @@ function _vector_norm(v)
 		// Finite p-norm
 		
 		// Calculate the sum of |vi|^p
-		var tot = 0;
-		for (var i = 0; i < array_length(v); i++)
-			tot += power(abs(v[i]), p);
+		var tot = array_reduce(v, method({ p: p }, function(previous, current, index) {
+            return previous + power(abs(current), self.p);
+        }));
 		
 		// Return the 1/p power of the sum
 		return power(tot, 1/p);

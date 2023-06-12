@@ -20,10 +20,7 @@ function _vector_distance(u, v)
 		return -1;
 	
 	// Calculate the distance as ||u-v||
-	var diff = array_create(array_length(u)); // difference vector
-	for (var i = 0; i < array_length(diff); i++)
-		diff[i] = u[i] - v[i];
-	
-	// Return the norm of u-v
-	return _vector_norm(diff, p);
+    return _vector_norm(array_map(u, method({ v: v }, function(value, index) {
+        return value - self.v[index];
+    })), p);
 }

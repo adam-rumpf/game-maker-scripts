@@ -63,7 +63,7 @@ function _ini_keys(fname, sec)
 	
 	// Transfer queue contents into an array
 	var keys = array_create(ds_queue_size(q));
-	for (var i = 0; i < array_length(keys); i++)
+	for (var i = 0, n = array_length(keys); i < n; i++)
 		keys[i] = ds_queue_dequeue(q);
 	ds_queue_destroy(q);
 	

@@ -23,7 +23,7 @@ function _create_graph(v, e)
 	var m = array_length(e); // number of edges
 	
 	// Verify dimensions of arguments
-	for (var i = 0; i < array_length(e); i++)
+	for (var i = 0; i < m; i++)
 		if (array_length(e[i]) != 2)
 			return undefined;
 	if (is_array(supply) == true)

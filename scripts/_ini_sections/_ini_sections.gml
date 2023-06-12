@@ -43,7 +43,7 @@ function _ini_sections(fname)
 	
 	// Transfer queue contents into an array
 	var sections = array_create(ds_queue_size(q));
-	for (var i = 0; i < array_length(sections); i++)
+	for (var i = 0, n = array_length(sections); i < n; i++)
 		sections[i] = ds_queue_dequeue(q);
 	ds_queue_destroy(q);
 	

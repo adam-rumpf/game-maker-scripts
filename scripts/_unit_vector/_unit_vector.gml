@@ -12,11 +12,8 @@ function _unit_vector(u, v)
 	if (array_length(u) != array_length(v))
 		return undefined;
 	
-	// Calculate the direction vector from u to v.
-	var dir = array_create(array_length(u));
-	for (var i = 0; i < array_length(u); i++)
-		dir[i] = v[i] - u[i];
-	
-	// Return a rescaled direction vector
-	return _vector_scale(dir, 1);
+	// Calculate the direction vector from u to v and rescale it
+	return _vector_scale(array_map(u, method({ v: v }, function(value, index) {
+        return self.v[index] - value;
+    })), 1);
 }

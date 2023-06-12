@@ -22,13 +22,13 @@ function _decimal_to_base(num, b)
 	// Iteratively evaluate quotients and remainders after division by the base
 	var arr = array_create(len, 0); // initialize array with the number of needed digits
 	var total = num; // running total of the given number
-	for (var n = 0; n < array_length(arr); n++)
+	for (var i = 0, n = array_length(arr); i < n; i++)
 	{
 		// If descending, load array in reverse order
 		if (descending == true)
-			arr[len-n-1] = total mod b;
+			arr[len-i-1] = total mod b;
 		else
-			arr[n] = total mod b;
+			arr[i] = total mod b;
 		total = floor(total/b);
 	}
 	

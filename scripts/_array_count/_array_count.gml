@@ -7,13 +7,9 @@
 function _array_count(arr, val)
 {
 	// Go through array to tally instances of value
-	var count = 0;
-	for (var i = 0; i < array_length(arr); i++)
-	{
-		if (arr[i] == val)
-			count++;
-	}
-	
-	// Return final tally
-	return count;
+    return array_reduce(arr, method({ val: val }, function(previous, current, index) {
+        if (current == self.val)
+            return previous + 1;
+        return previous;
+    }), 0);
 }

@@ -6,14 +6,5 @@
 
 function _array_function(f, arr)
 {
-	// Get array size
-	var n = array_length(arr);
-	
-	// Apply function to all values in input array
-	var out = array_create(n); // output array
-	for (var i = 0; i < n; i++)
-		out[i] = f(arr[i]);
-	
-	// Return output array
-	return out;
+    return array_map(arr, f);
 }
