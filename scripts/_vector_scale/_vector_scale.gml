@@ -23,10 +23,7 @@ function _vector_scale(v, r)
 		return v;
 	
 	// Otherwise rescale each component of the vector
-	var vr = array_create(array_length(v)); // output vector
-	for (var i = 0; i < array_length(v); i++)
-		vr[i] = v[i]*(r/ri);
-	
-	// Return the rescaled vector
-	return vr;
+    return array_map(v, method({ f: r / ri }, function(value, index) {
+        return value * self.f;
+    }));
 }
